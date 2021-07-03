@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
 
 # Install cross compiler
 RUN wget -O /tmp/musl.tgz https://musl.cc/armv7l-linux-musleabihf-cross.tgz \
-  tar xzf /tmp/musl.tgz armv7l-linux-musleabihf-cross -C /
+  && tar xzf /tmp/musl.tgz armv7l-linux-musleabihf-cross -C /
 
 # ** [Optional] Uncomment this section to install additional packages. **
 RUN apk update \
